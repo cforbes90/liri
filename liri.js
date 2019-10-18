@@ -109,21 +109,8 @@ if (prepCommand == "movie-this") {
 }
 if (prepCommand == "do-what-it-says") {
 }
-// function concertThis(artist);
-// artist=supportCommand;
 
 
-// function (spotify-this-song)
-//movie-this
-//do-what-it-says
-
-// node liri.js concert-this <artist/band name here>
-
-// This will search the Bands in Town Artist Events API ("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
 
 
-// This Section Contains calls to external Modules
-// make sure to perform npm install
-
-// Load the "dotenv" package to make .env info readable.
 
