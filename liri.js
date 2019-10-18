@@ -56,13 +56,32 @@ if (prepCommand == "concert-this") {
 if (prepCommand == "spotify-this-song") {
     console.log("You are in Spotify this song!");
     spotify
-        .search({ type: 'track', query: supportCommand, limit:3 })
+        .search({ type: 'track', query: supportCommand, limit: 1 })
         .then(function (response) {
-            console.log(response.tracks);
-            console.log(response.tracks);
-            console.log(response.tracks);
-            console.log(response.tracks);
-        })
+            // console.log("The following are the artists");
+            // console.log(response.tracks.items[0].artists);
+            for (let i = 0; i < response.tracks.items.length; i++) {
+                let currentSong = response.tracks.items[i];
+                let artistsStr = ""
+
+                for (let i = 0; i < currentSong.artists.length; i++) {
+                    if (i !== 0) {
+                        artistsStr += ", " + currentSong.artists[i].name;
+                    } else {
+                        artistsStr = currentSong.artists[i].name;
+                    }
+                    
+                }
+                console.log("--------------");
+                console.log("Artists: ", artistsStr);
+                console.log("Song name: ",currentSong.name);
+                console.log("Song link: ",currentSong.external_urls.spotify);
+                console.log("Album name: ", currentSong.album.name);
+                // console.log(response.tracks);
+                // console.log(response.tracks);
+                console.log("--------------");
+            }
+        })    
         .catch(function (err) {
             console.log(err);
         });
