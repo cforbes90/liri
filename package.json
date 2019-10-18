@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/shrfu31/liri/issues"
   },
-  "homepage": "https://github.com/shrfu31/liri#readme"
+  "homepage": "https://github.com/shrfu31/liri#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-spotify-api": "^1.1.1"
+  }
 }
